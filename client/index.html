@@ -1,0 +1,20 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+</head>
+<body>
+  <header>
+    <h1>Todo List ({{incompleteCount}})</h1>
+	<input type="checkbox" id="checkbox-hide-completed" class="hide-completed" checked="{{hideCompleted}}"/>
+	<label for="checkbox-hide-completed">Hide completed</label>
+	<form class="new-task">
+      <input type="text" name="text" placeholder="Add new task"/>
+	</form>
+  </header>
+
+  <ul>
+    {{#each tasks}}
+      {{>task}}
+    {{/each}}
+  </ul>
+</body>
